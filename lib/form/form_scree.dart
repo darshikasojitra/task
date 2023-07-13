@@ -26,7 +26,7 @@ class FormScreen extends StatelessWidget {
         Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(
-              builder: (context) => APIScreen(),
+              builder: (context) => const APIScreen(),
             ),
             (route) => false);
       }
@@ -132,16 +132,7 @@ class FormScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(top: 620.h, left: 25.w, right: 25.w),
             child: MaterialButton(
-              onPressed: () {
-                if (fromKey.currentState!.validate()) {
-                  Navigator.pushAndRemoveUntil(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => APIScreen(),
-                      ),
-                          (route) => false);
-                }
-              },
+              onPressed: () => nextScreen(),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(35.w)),
               height: 50,
