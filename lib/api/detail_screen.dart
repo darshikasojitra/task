@@ -39,8 +39,8 @@ class DetailScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(left: 0, right: 0, top: 20.h),
               child: Container(
-                height: 200,
-                width: 350,
+                height: 200.h,
+                width: 350.w,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
