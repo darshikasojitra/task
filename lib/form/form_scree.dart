@@ -33,12 +33,12 @@ class FormScreen extends StatelessWidget {
     }
 
     return Scaffold(
-      backgroundColor: Color(0xffE4E9F1),
+      backgroundColor: const Color(0xffE4E9F1),
       body: Stack(
         children: [
           Padding(
             padding: EdgeInsets.only(left: 45.w, top: 70.h),
-            child: Container(
+            child: SizedBox(
               height: 60,
               width: 200,
               //color: Colors.blue,
@@ -87,15 +87,15 @@ class FormScreen extends StatelessWidget {
                             ),
                             focusedBorder: OutlineInputBorder(
                                 borderSide:
-                                    BorderSide(color: Color(0xff1C6BA4)),
+                                    const BorderSide(color: Color(0xff1C6BA4)),
                                 borderRadius: BorderRadius.circular(35.r)),
                             enabledBorder: OutlineInputBorder(
                                 borderSide:
-                                    BorderSide(color: Color(0xff1C6BA4)),
+                                    const BorderSide(color: Color(0xff1C6BA4)),
                                 borderRadius: BorderRadius.circular(35.r)),
                             border: OutlineInputBorder(
                                 borderSide:
-                                    BorderSide(color: Color(0xff1C6BA4)),
+                                    const BorderSide(color: Color(0xff1C6BA4)),
                                 borderRadius: BorderRadius.circular(35.r)),
                           ),
                           initialCountryCode: 'IN',
@@ -137,7 +137,7 @@ class FormScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(35.w)),
               height: 50,
               minWidth: double.infinity,
-              color: Color(0xff1C6BA4),
+              color: const Color(0xff1C6BA4),
               child: Text(
                 'Register',
                 style: TextStyle(
@@ -161,7 +161,7 @@ class FormScreen extends StatelessWidget {
           style: TextStyle(
             fontSize: 28.sp,
             fontWeight: FontWeight.w700,
-            color: Color(0xff1C6BA4),
+            color: const Color(0xff1C6BA4),
           ),
         ),
         Text(
@@ -180,7 +180,7 @@ class FormScreen extends StatelessWidget {
       children: [
         Expanded(
           child: RadioListTile(
-            activeColor: Color(0xff1C6BA4),
+            activeColor: const Color(0xff1C6BA4),
             title: Text(
               "Male",
               style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500),
@@ -194,7 +194,7 @@ class FormScreen extends StatelessWidget {
         ),
         Expanded(
           child: RadioListTile(
-            activeColor: Color(0xff1C6BA4),
+            activeColor: const Color(0xff1C6BA4),
             title: Text(
               "Female",
               style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500),

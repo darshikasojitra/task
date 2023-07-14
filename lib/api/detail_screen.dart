@@ -29,7 +29,7 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(name.toString()),
-        backgroundColor: Color(0xff1C6BA4),
+        backgroundColor: const Color(0xff1C6BA4),
       ),
       body: Padding(
         padding: EdgeInsets.only(left: 25.w, right: 25.w),
@@ -63,7 +63,7 @@ class DetailScreen extends StatelessWidget {
               ),
             ),
             Text(
-              'Category : ${category}',
+              'Category : $category',
               style: TextStyle(
                 fontSize: 15.sp,
               ),
@@ -72,7 +72,7 @@ class DetailScreen extends StatelessWidget {
               height: 10.h,
             ),
             Text(
-              'Glass : ${glass}',
+              'Glass : $glass',
               style: TextStyle(
                 fontSize: 15.sp,
               ),
@@ -81,7 +81,7 @@ class DetailScreen extends StatelessWidget {
               height: 10.h,
             ),
             Text(
-              'Alcoholic : ${strAlcoholic}',
+              'Alcoholic : $strAlcoholic',
               style: TextStyle(
                 fontSize: 15.sp,
               ),
@@ -90,7 +90,7 @@ class DetailScreen extends StatelessWidget {
               height: 10.h,
             ),
             Text(
-              'Ingredient1 : ${strIngredient1}',
+              'Ingredient1 : $strIngredient1',
               style: TextStyle(
                 fontSize: 15.sp,
               ),
@@ -99,7 +99,7 @@ class DetailScreen extends StatelessWidget {
               height: 10.h,
             ),
             Text(
-              'Ingredient1 : ${strIngredient2}',
+              'Ingredient1 : $strIngredient2',
               style: TextStyle(
                 fontSize: 15.sp,
               ),
@@ -119,7 +119,7 @@ class DetailScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(35.w)),
                 height: 50.h,
                 minWidth: double.infinity,
-                color: Color(0xff1C6BA4),
+                color: const Color(0xff1C6BA4),
                 child: Text(
                   'Listen Audio',
                   style: TextStyle(
@@ -135,3 +135,4 @@ class DetailScreen extends StatelessWidget {
     );
   }
 }
+//https://i.diawi.com/9tbZjy

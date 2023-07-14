@@ -43,83 +43,83 @@ class APIScreen extends StatelessWidget {
     }
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text('API'),
-          backgroundColor: Color(0xff1C6BA4),
-        ),
-        body: Container(
-          height: 600.h,
-          child: StreamBuilder(
-            stream: data().asStream(),
-            builder: (context, snapshot) {
-              if (snapshot.hasData) {
-                return ListView.builder(
-                  itemCount: snapshot.data?.drinks?.length,
-                  itemBuilder: (context, index) {
-                    var drink = snapshot.data?.drinks?.elementAt(index);
-                    return Padding(
-                      padding:
-                          EdgeInsets.only(left: 25.w, right: 25.w, top: 10.h),
-                      child: GestureDetector(
-                        onTap: () => nextScreen(drink),
-                        child: Container(
-                          height: 120.h,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20.w),
-                            //color: Colors.blue,
-                          ),
-                          child: Row(
-                            children: [
-                              Container(
-                                height: 120.h,
-                                width: 95.w,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(10.r),
-                                      topLeft: Radius.circular(10.r)),
-                                  image: DecorationImage(
-                                    image: NetworkImage(
-                                      (drink?.strDrinkThumb).toString(),
-                                    ),
-                                    fit: BoxFit.cover,
+      appBar: AppBar(
+        title: const Text('API'),
+        backgroundColor: const Color(0xff1C6BA4),
+      ),
+      body: Container(
+        height: 600.h,
+        child: StreamBuilder(
+          stream: data().asStream(),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              return ListView.builder(
+                itemCount: snapshot.data?.drinks?.length,
+                itemBuilder: (context, index) {
+                  var drink = snapshot.data?.drinks?.elementAt(index);
+                  return Padding(
+                    padding:
+                        EdgeInsets.only(left: 25.w, right: 25.w, top: 10.h),
+                    child: GestureDetector(
+                      onTap: () => nextScreen(drink),
+                      child: Container(
+                        height: 120.h,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.w),
+                          //color: Colors.blue,
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              height: 120.h,
+                              width: 95.w,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(10.r),
+                                    topLeft: Radius.circular(10.r)),
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    (drink?.strDrinkThumb).toString(),
                                   ),
+                                  fit: BoxFit.cover,
                                 ),
                               ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 10.w, top: 10.h),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                        'Drinkid : ${(drink?.idDrink).toString()}'),
-                                    Container(
-                                      width: 200.w,
-                                      child: Text(
-                                          'Drink : ${(drink?.strDrink).toString()}'),
-                                    ),
-                                    Container(
-                                      width: 200.w,
-                                      child: Text(
-                                          'DrinkCategory : ${drink?.strCategory}'),
-                                    ),
-                                    Text('Glass : ${drink?.strGlass}'),
-                                  ],
-                                ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 10.w, top: 10.h),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                      'Drinkid : ${(drink?.idDrink).toString()}'),
+                                  Container(
+                                    width: 200.w,
+                                    child: Text(
+                                        'Drink : ${(drink?.strDrink).toString()}'),
+                                  ),
+                                  SizedBox(
+                                    width: 200.w,
+                                    child: Text(
+                                        'DrinkCategory : ${drink?.strCategory}'),
+                                  ),
+                                  Text('Glass : ${drink?.strGlass}'),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
-                    );
-                  },
-                );
-              }
-              return const Center(child: CircularProgressIndicator());
-            },
-          ),
+                    ),
+                  );
+                },
+              );
+            }
+            return const Center(child: CircularProgressIndicator());
+          },
         ),
+      ),
     );
   }
 }

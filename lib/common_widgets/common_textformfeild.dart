@@ -53,35 +53,35 @@ class CommonTextFormFeild extends StatelessWidget {
       inputFormatters: inputFormatters,
       initialValue: initialValue,
       //textAlign: widget.textAlign,
-      cursorColor: Color(0xff1C6BA4),
+      cursorColor: const Color(0xff1C6BA4),
       decoration: InputDecoration(
         contentPadding: contentPadding,
         labelText: labelText,
-        floatingLabelStyle: TextStyle(color: Color(0xff1C6BA4)),
+        floatingLabelStyle: const TextStyle(color: Color(0xff1C6BA4)),
         hintText: hintText,
         hintStyle: TextStyle(fontSize: 14.sp),
         border:  OutlineInputBorder(
           borderRadius: BorderRadius.circular(35.w),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: Color(0xff1C6BA4),
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(35.w),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: Color(0xff1C6BA4),
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(35.w),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: Color(0xff1C6BA4),
           ),
         ),
         enabled: true,
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(35.w),
-          borderSide: BorderSide(color: Color(0xff1C6BA4)),
+          borderSide: const BorderSide(color: Color(0xff1C6BA4)),
         ),
         suffixIcon: suffixIcon,
       ),

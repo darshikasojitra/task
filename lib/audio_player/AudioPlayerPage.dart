@@ -9,33 +9,24 @@ class AudioPlayerPage extends StatefulWidget {
 class _AudioPlayerPageState extends State<AudioPlayerPage> {
   AudioPlayer audioPlayer = AudioPlayer();
   @override
-  void initState() {
-    super.initState();
-    audioPlayer = AudioPlayer();
-  }
-
-  @override
-  void dispose() {
-    audioPlayer.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    // Build your UI here
     return Scaffold(
       appBar: AppBar(
-        title: Text('Audio Player'),
-        backgroundColor: Color(0xff1C6BA4),
+        title: const Text('Audio Player'),
+        backgroundColor: const Color(0xff1C6BA4),
       ),
       body: Center(
         child: MaterialButton(
           onPressed: () async {
-            await audioPlayer.play(
-              'assets/audio/sample-3s.mp3' as Source,
+            audioPlayer.play(
+              AssetSource('audio/sample-3s.mp3'),
             );
           },
-          child: Text('Play Audio'),
+          color: const Color(0xff1C6BA4),
+          child: const Text(
+            'Play Audio',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
       ),
     );
